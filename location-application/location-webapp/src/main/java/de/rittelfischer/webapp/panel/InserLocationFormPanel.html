@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  </head>
+  <body>
+  
+  <wicket:panel>
+      <form wicket:id="insertLocationForm">
+          <fieldset>
+              <legend>Algemein</legend>
+          <table>
+              <tr>
+                  <td>Name</td> <td><input type="text" wicket:id="name"/></td>
+               </tr>
+               <tr>
+                   <td>Description</td><td> <textarea wicket:id="description"/></td>
+                </tr>
+                <tr>
+                    <td>Address</td> <td><textarea wicket:id="address"/></td>
+                </tr>
+          </table>
+              </fieldset>
+                    <fieldset>
+                        <legend>Brauchen</legend>
+          <ul>
+              <li wicket:id="needs"> Benötige: <input type="text" wicket:id="need"/></li>
+          </ul>
+          <button wicket:id="add">Add Another</button>
+          </fieldset>               
+          <input type="submit"/>
+      </form>    
+  </wicket:panel>
+  
+
+</body>
+</html>

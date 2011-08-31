@@ -1,0 +1,5 @@
+#foreach($doc in $response.results)
+	#foreach($value in $doc.getFieldValues('need'))
+		<li><a href="#">$value</a></li>
+	#end
+#end

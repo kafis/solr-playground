@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<config>
+
+	<luceneMatchVersion>LUCENE_33</luceneMatchVersion>
+
+	<mainIndex>
+		<infoStream file="lucene_debug.txt">true</infoStream>
+	</mainIndex>
+	<requestDispatcher handleSelect="true" />
+
+  <requestHandler name="/admin/" 
+                  class="solr.admin.AdminHandlers" />
+
+
+	<requestHandler name="/searchneeds" class="solr.SearchHandler">
+		<lst name="defaults">
+       <str name="wt">velocity</str>
+
+       <str name="v.template">needs</str>
+       <str name="title">Needs</str>
+		</lst>
+	</requestHandler>
+
+
+  <requestHandler name="search" class="solr.SearchHandler" default="true">
+     <lst name="defaults">
+       <str name="echoParams">explicit</str>
+       <int name="rows">10</int>
+     </lst>
+
+    </requestHandler>
+
+
+	<requestHandler name="/dataimport"
+		class="org.apache.solr.handler.dataimport.DataImportHandler">
+		<lst name="defaults">
+			<str name="config">data-config.xml</str>
+		</lst>
+	</requestHandler>
+</config>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+  </head>
+  <body>
+  
+  <wicket:panel>
+  
+      
+      <fieldset wicket:id="locationsTable">
+          <legend>Name: <span wicket:id="name"/></legend>
+          <table>
+               <tr>
+                   <td>Description</td><td> <textarea wicket:id="description"/></td>
+                </tr>
+                <tr>
+                    <td>Address</td> <td><textarea wicket:id="address"/></td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li wicket:id="needs">
+                                <span wicket:id="need"/>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+          </table>
+          </fieldset>
+  </wicket:panel>
+  
+
+</body>
+</html>

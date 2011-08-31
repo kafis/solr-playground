@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+	<head>
+		<meta charset="utf-8" />
+		<title>Proof of Concept</title>
+                <link href="css/style.css" type="text/css" rel="stylesheet"/>
+	</head>
+	<body>
+            <div>
+                <a href="" wicket:id="addLocation">Location anlegen</a><br/>
+                <a href="" wicket:id="showLocation">Locations anzeigen</a><br/>
+                <a href="" wicket:id="autoSuggest">Auto Suggest ausprobieren</a><br/>
+                <a href="/solr/dataimport?command=full-import">Daten indizieren (Reload Page after arriving!)</a><br/>
+                <a href="/solr/select/?q=*:*">Indizierte Daten anzeigen</a><br/>
+            </div>
+            <wicket:child/>
+	</body>
+</html>

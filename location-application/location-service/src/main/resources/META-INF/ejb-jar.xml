@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ejb-jar>
+   
+      <ejb-local-ref>
+        <ejb-ref-name>ejb/DataService</ejb-ref-name>
+        <ejb-ref-type>Session</ejb-ref-type>
+        <local>de.rittelfischer.dataservice.service.DataService</local>
+   </ejb-local-ref>
+</ejb-jar>

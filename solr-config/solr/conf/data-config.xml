@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataConfig>
+	<dataSource 
+		type="JdbcDataSource" 
+		driver="org.apache.derby.jdbc.ClientDriver" 
+		url="jdbc:derby://localhost:1527/sun-appserv-samples" 
+		user="app" 
+		password="app"
+		name="myDs"/>
+		
+  		
+	<document name="needs">
+		<entity name="need" query="select * from need" dataSource="myDs">
+			<field name="need" column="need"/>		
+		</entity>	
+	</document>
+<!--	
+	<document name="locations">
+		<entity name="location" query="select * from table_location" dataSource="myDs">
+			<field name="address" column="address"/>
+			<field name="description" column="description"/>
+			<field name="name" column="name"/>
+	 
+			<entity name="needs" query="SELECT * FROM TABLE_LOCATION l 
+										LEFT JOIN  TABLE_LOCATION_NEED ln ON l.ID = ln.LOCATION_ID
+										LEFT JOIN NEED n ON ln.NEEDS_ID=n.ID
+										WHERE l.id = ${location.id};">
+				<field name="need" column="need"/>
+			</entity>
+		</entity>
+	</document>
+	-->
+</dataConfig>
