@@ -46,7 +46,7 @@
  
            if (event.which != 39 && event.which != 37 && event.which != 38 && event.which != 40 && event.which != 13 && event.which != 9 ) {
  
-                fieldVal = fieldParent.find('input:eq(0)').val();
+                fieldVal = fieldParent.find('input:eq(0)').val().toLowerCase();
                 suggest(fieldVal,this.id);
            } else {
  
@@ -54,8 +54,8 @@
  
              switch (event.which)
                 {
-                 case 40: { keyEvent(fieldChild,'next');break; }
-                 case 38: { keyEvent(fieldChild,'prev');break; }
+                 case 40: {eyEvent(fieldChild,'next');break;}
+                 case 38: {eyEvent(fieldChild,'prev');break;}
                  case 13:
                  {
                         fieldParent.children('input:eq(0)').val($("li[class='selected'] a").text());
@@ -66,7 +66,7 @@
                  }
                  case 9:
                  {
-                        offFocus(this); $("li").removeClass("selected");
+                        offFocus(this);$("li").removeClass("selected");
                         break;
                  }
              }
@@ -77,7 +77,7 @@
             if (event.keyCode == 13) return false;
         });
  
-        $("." + config.className + " > input").live("blur", function(){ offFocus(this); $("li").removeClass("selected"); });
+        $("." + config.className + " > input").live("blur", function(){offFocus(this);$("li").removeClass("selected");});
  
         function suggest(dataInput, id)
         {
