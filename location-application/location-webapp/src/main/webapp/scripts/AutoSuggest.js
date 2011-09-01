@@ -54,8 +54,8 @@
  
              switch (event.which)
                 {
-                 case 40: {eyEvent(fieldChild,'next');break;}
-                 case 38: {eyEvent(fieldChild,'prev');break;}
+                 case 40: {keyEvent(fieldChild,'next');break;}
+                 case 38: {keyEvent(fieldChild,'prev');break;}
                  case 13:
                  {
                         fieldParent.children('input:eq(0)').val($("li[class='selected'] a").text());
