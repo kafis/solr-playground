@@ -1,1 +1,39 @@
-Hello From Git
+Der Erste Spielversuch mit Autosuggestion
+
+Installation:
+1. Get Apache-Solr
+http://www.apache.org/dyn/closer.cgi/lucene/solr/
+
+2. Aufsetzen von SOLR im Glassfish
+2.1. The easy way
+Kopiere das Verzeichnis 
+solr-playground/solr-config/solr 
+nach {PATH-TO-GLASSFISH}/{DOMAIN}/config/
+Ergebnis:
+{PATH-TO-GLASSFISH}/{DOMAIN}/config/solr/
+
+2.2 Konfig
+In der Admin Konsole vom Glassfish
+unter Konfiguration/server-config/Systemeigenschaften
+setze die Umgebungsvariable "solr.solr.home" auf PATH/TO/SOLR
+
+JNDI Konfig ist scheinbar nicht möglich im Glassfish, das will einfach nicht klappen, es ist zum ausfuchsen
+
+3.
+solr.war deployen
+
+4.
+asadmin start-database
+
+5.
+Projekt location-application bauen
+
+6.
+deploy location-webapp
+
+7.
+Ausprobieren
+
+Anmerkungen
+Die Datenbank ist flüchtig, nach dem undeployen der webapp verschwinden alle Daten wieder. Der SOLR-Index bleibt.
+
